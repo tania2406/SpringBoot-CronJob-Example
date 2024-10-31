@@ -17,7 +17,7 @@ Before you begin, ensure you have met the following requirements:
 - Apache Maven: Version 3.6 or higher.
 - Spring Boot: This project uses Spring Boot 2.7.x or higher.
 ## Configuration
-pom.xml
+```pom.xml
 Ensure your pom.xml is configured to include the Spring Web dependency and enable scheduling:
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -59,7 +59,7 @@ Ensure your pom.xml is configured to include the Spring Web dependency and enabl
 - 0 12 * * * - Executes every day at noon.
 - 0 0 * * 1 - Executes every Monday at midnight.
 ## Cron Expression Breakdown:
--------------------------------------------
+```-------------------------------------------
 Field        | Value Range
 -------------|-----------------------------
 Seconds      | 0 - 59
@@ -70,7 +70,7 @@ Month        | 1 - 12
 Day of Week  | 0 - 7 (Sunday is both 0 and 7)
 ---------------------------------------------
 ## Cron Expression Visual Representation:
-* * * * * *
+```* * * * * *
 | | | | | |
 | | | | | +---- Day of the week (0 - 7) (Sunday is both 0 and 7)
 | | | | +------ Month (1 - 12)
