@@ -1,25 +1,24 @@
 # SpringBoot-CronJob-Example
-Overview
+## Overview
 This project demonstrates how to set up a Spring Boot application that utilizes a cron job to execute tasks at specified intervals. The application is built using only the Spring Web dependency, showcasing how to leverage Spring's scheduling capabilities.
 
-Table of Contents
-Prerequisites
-Project Structure
-Configuration
-Creating the Cron Job
-Running the Application
-Accessing the Application
-License
-Prerequisites
+## Table of Contents
+- Prerequisites
+- Project Structure
+- Configuration
+- Creating the Cron Job
+- Running the Application
+- Accessing the Application
+- License
+## Prerequisites
 Before you begin, ensure you have met the following requirements:
 
-Java Development Kit (JDK): Version 11 or higher.
-Apache Maven: Version 3.6 or higher.
-Spring Boot: This project uses Spring Boot 2.7.x or higher.
-Configuration
+- Java Development Kit (JDK): Version 11 or higher.
+- Apache Maven: Version 3.6 or higher.
+- Spring Boot: This project uses Spring Boot 2.7.x or higher.
+## Configuration
 pom.xml
 Ensure your pom.xml is configured to include the Spring Web dependency and enable scheduling:
-
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -53,11 +52,13 @@ Ensure your pom.xml is configured to include the Spring Web dependency and enabl
         </plugins>
     </build>
 </project>
-Example Cron Expression
-0 * * * * * - Executes every minute at the 0th second.
-0 12 * * * - Executes every day at noon.
-0 0 * * 1 - Executes every Monday at midnight.
-Cron Expression Breakdown:
+
+
+## Example Cron Expression
+- 0 * * * * * - Executes every minute at the 0th second.
+- 0 12 * * * - Executes every day at noon.
+- 0 0 * * 1 - Executes every Monday at midnight.
+## Cron Expression Breakdown:
 -------------------------------------------
 Field        | Value Range
 -------------|-----------------------------
@@ -68,7 +69,7 @@ Day of Month | 1 - 31
 Month        | 1 - 12
 Day of Week  | 0 - 7 (Sunday is both 0 and 7)
 ---------------------------------------------
-Cron Expression Visual Representation:
+## Cron Expression Visual Representation:
 * * * * * *
 | | | | | |
 | | | | | +---- Day of the week (0 - 7) (Sunday is both 0 and 7)
